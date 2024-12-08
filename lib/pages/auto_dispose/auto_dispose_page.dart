@@ -7,6 +7,7 @@ class AutoDisposePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // final value = ref.watch(autoDisposeCounterProvider);
     final value = ref.watch(autoDisposeAgeProvider);
     return Scaffold(
       appBar: AppBar(

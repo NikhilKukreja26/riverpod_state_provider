@@ -6,7 +6,7 @@ part of 'basic_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$ageHash() => r'10273006d8d5f537f33a1bff352e79358f2278a7';
+String _$ageHash() => r'55f756950ae07c2edb8693889f70d7b478358c78';
 
 /// See also [age].
 @ProviderFor(age)
@@ -19,6 +19,8 @@ final ageProvider = Provider<String>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef AgeRef = ProviderRef<String>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

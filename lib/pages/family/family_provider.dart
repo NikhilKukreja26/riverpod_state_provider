@@ -1,8 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final familyProvider = StateProvider.family<int, int>((ref, initialValue) {
+final StateProviderFamily<int, int> familyCounterProvider =
+    StateProvider.family<int, int>((ref, value) {
   ref.onDispose(() {
-    print('[familyProvider] disposed');
+    print('[familyCounterProvider($value)] disposed');
   });
-  return initialValue;
+  return value;
 });

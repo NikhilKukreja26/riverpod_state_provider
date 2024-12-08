@@ -1,9 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final autoDisposeFamilyProvider =
-    StateProvider.autoDispose.family<int, int>((ref, initialValue) {
+final AutoDisposeStateProviderFamily<int, int>
+    autoDisposeFamilyCounterProvider =
+    StateProvider.autoDispose.family<int, int>((ref, value) {
   ref.onDispose(() {
-    print('[autoDisposeFamilyProvider($initialValue)] disposed');
+    print('[autoDisposeFamilyCounterProvider($value)] disposed');
   });
-  return initialValue;
+  return value;
 });

@@ -7,8 +7,8 @@ class AutoDisposeFamilyPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final incrementValue = ref.watch(autoDisposeFamilyProvider(10));
-    final decrementValue = ref.watch(autoDisposeFamilyProvider(-10));
+    final incrementValue = ref.watch(autoDisposeFamilyCounterProvider(10));
+    final decrementValue = ref.watch(autoDisposeFamilyCounterProvider(-10));
     return Scaffold(
       appBar: AppBar(
         title: const Text('AutoDisposeFamilyStateProvider'),
@@ -28,7 +28,7 @@ class AutoDisposeFamilyPage extends ConsumerWidget {
                 FilledButton(
                   onPressed: () {
                     ref
-                        .read(autoDisposeFamilyProvider(10).notifier)
+                        .read(autoDisposeFamilyCounterProvider(10).notifier)
                         .update((state) => state + 10);
                   },
                   child: const Text(
@@ -52,7 +52,7 @@ class AutoDisposeFamilyPage extends ConsumerWidget {
                 FilledButton(
                   onPressed: () {
                     ref
-                        .read(autoDisposeFamilyProvider(-10).notifier)
+                        .read(autoDisposeFamilyCounterProvider(-10).notifier)
                         .update((state) => state - 10);
                   },
                   child: const Text(

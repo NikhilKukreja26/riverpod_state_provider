@@ -7,8 +7,8 @@ class FamilyPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final incrementValue = ref.watch(familyProvider(10));
-    final decrementValue = ref.watch(familyProvider(-10));
+    final incrementValue = ref.watch(familyCounterProvider(10));
+    final decrementValue = ref.watch(familyCounterProvider(-10));
     return Scaffold(
       appBar: AppBar(
         title: const Text('FamilyStateProvider'),
@@ -28,7 +28,7 @@ class FamilyPage extends ConsumerWidget {
                 FilledButton(
                   onPressed: () {
                     ref
-                        .read(familyProvider(10).notifier)
+                        .read(familyCounterProvider(10).notifier)
                         .update((state) => state + 10);
                   },
                   child: const Text(
@@ -52,7 +52,7 @@ class FamilyPage extends ConsumerWidget {
                 FilledButton(
                   onPressed: () {
                     ref
-                        .read(familyProvider(-10).notifier)
+                        .read(familyCounterProvider(-10).notifier)
                         .update((state) => state - 10);
                   },
                   child: const Text(

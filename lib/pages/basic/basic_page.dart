@@ -10,7 +10,7 @@ class BasicPage extends ConsumerWidget {
     final value = ref.watch(ageProvider);
     // final value = ref.watch(counterProvider);
 
-    // ref.listen(counterProvider, (previous, next) {
+    // ref.listen<int>(counterProvider, (prev, next) {
     //   if (next == 3) {
     //     showDialog(
     //         context: context,
